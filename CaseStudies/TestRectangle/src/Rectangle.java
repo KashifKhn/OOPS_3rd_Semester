@@ -1,6 +1,11 @@
 public class Rectangle {
-    private double length = 1;
-    private double width = 1;
+    private double length ;
+    private double width ;
+
+    public Rectangle() {
+        this.length = 1;
+        this.width = 1;
+    }
 
     public double getLength() {
         return length;
@@ -19,4 +24,14 @@ public class Rectangle {
         if (width > 0 && width < 20)
             this.width = width;
     }
+
+    public void displayPerimeter() {
+        double perimeter = 2 * (this.length + this.width);
+        System.out.println("The perimeter is:  " + perimeter);
+    }
+    public void displayArea() {
+        double area = this.length + this.width;
+        System.out.println("The perimeter is:  " + area);
+    }
+
 }
