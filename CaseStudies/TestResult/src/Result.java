@@ -22,7 +22,7 @@ public class Result {
     }
 
     public int[] getMarks() {
-        return marks;
+        return this.marks;
     }
 
     public void setMarks(int[] marks) {
@@ -36,23 +36,23 @@ public class Result {
         System.out.print("Please Enter The Registration No:  ");
         this.regNo = sc.nextLine();
         System.out.println("Please Enter Marks of Subject");
-        for (int i=0; i<marks.length; i++) {
+        for (int i=0; i<this.marks.length; i++) {
             System.out.print("Please Enter Marks of " + i + 1 + "Subject:  ");
-            marks[i] = sc.nextInt();
+            this.marks[i] = sc.nextInt();
         }
     }
     public void showInfo() {
         System.out.println("Name: " + this.name);
         System.out.println("Reg No: " + this.regNo);
         System.out.println("Subject Marks: ");
-        for (int i=0; i<marks.length; i++) {
-            System.out.printf("\t\tSubject %d Marks: %d \n", i+1, marks[i]);
+        for (int i=0; i<this.marks.length; i++) {
+            System.out.printf("\t\tSubject %d Marks: %d \n", i+1, this.marks[i]);
         }
     }
 
     public int totalMarks() {
         int totalMarks = 0;
-        for (int mark : marks) {
+        for (int mark : this.marks) {
             totalMarks += mark;
         }
         return totalMarks;
@@ -60,11 +60,9 @@ public class Result {
 
     public int avgMarks() {
         int totalMarks = 0;
-        for (int mark : marks) {
+        for (int mark : this.marks) {
             totalMarks += mark;
         }
-        return totalMarks / marks.length;
+        return totalMarks / this.marks.length;
     }
-
-
 }
