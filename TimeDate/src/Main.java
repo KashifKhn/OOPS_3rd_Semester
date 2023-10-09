@@ -9,8 +9,8 @@ public class Main {
 //        time3.displayTime12();
 //        time3.displayUniversalTime();
 
-        Date date = new Date(12, 12, 2012);
-        Date date2 = new Date(12, 12, 2012);
+        Date date = new Date(28, 1, 2015);
+        Date date2 = new Date(1, 1, 0);
         Date date3 = date.addDate(date2);
         date3.displayDate();
         date3.displayDateWithMonthNames();
