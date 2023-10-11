@@ -6,6 +6,12 @@ public class Time {
     private int seconds;
     private String meridiemIndicator;
 
+    public Time(int hours, int minutes, int seconds) {
+        this.hours = hours;
+        this.minutes = minutes;
+        this.seconds = seconds;
+    }
+
     public int getHours() {
         return hours;
     }

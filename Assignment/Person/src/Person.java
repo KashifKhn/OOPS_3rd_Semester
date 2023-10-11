@@ -1,14 +1,16 @@
 public class Person {
-    private String name;
+    public String name;
     private int age;
 
-    public String getName() {
-        return name;
-    }
-
+    //    Constructor
     public Person(String name, int age) {
         this.name = name;
         setAge(age);
+    }
+
+    //    getter and Setter
+    public String getName() {
+        return name;
     }
 
     public void setName(String name) {
@@ -27,6 +29,8 @@ public class Person {
         System.out.println("Age must be greater than 0");
         this.age = 1;
     }
+
+//    member Method
 
     public void displayPersonInfo() {
         System.out.println("Name: " + this.name + ", Age: " + this.age);

@@ -37,7 +37,6 @@ public class Time {
         System.out.println("Invalid Hours");
         this.hours = 0;
     }
-
     public int getMinutes() {
         return minutes;
     }

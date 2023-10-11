@@ -10,9 +10,10 @@ public class Main {
 //        time3.displayUniversalTime();
 
         Date date = new Date(28, 1, 2015);
-        Date date2 = new Date(1, 1, 0);
-        Date date3 = date.addDate(date2);
-        date3.displayDate();
-        date3.displayDateWithMonthNames();
+        Time time=new Time(14,25,23);
+        DateTime dateTime1=new DateTime(date,time);
+        DateTime dateTime2=new DateTime(date,time);
+        dateTime1.addDateTime(dateTime2);
+
     }
 }
