@@ -18,9 +18,7 @@ public class ComplexNumber {
         this(other.real, other.imaginary);
     }
 
-//    getter and Setter
-
-
+    //    getter and Setter
     public double getReal() {
         return real;
     }
