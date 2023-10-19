@@ -53,9 +53,16 @@ public class GradeBook {
     }
 
     private void printStudentMarks() {
-        System.out.printf("%15s %20s %10s\n", "Name", "Reg No", "Marks");
+        System.out.printf("%15s %20s", "Name", "Reg No");
+        for(int i = 0; i < this.students[0].getMark().length; i++)
+            System.out.printf("%15s%d","Assessment", i + 1);
+        System.out.println();
         for(Student student: this.students) {
-            System.out.printf("%15s %20s %10s\n", student.getName(), student.getRegNumber(), student.getMark());
+            System.out.printf("%15s %20s", student.getName(), student.getRegNumber());
+            for (double mark : student.getMark()) {
+                System.out.printf("%16s",mark);
+            }
+        System.out.println();
         }
         System.out.println("====================================================");
         System.out.println();

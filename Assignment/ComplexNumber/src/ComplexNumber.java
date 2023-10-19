@@ -38,7 +38,8 @@ public class ComplexNumber {
     //    member functions
 
     public void printComplexNumber() {
-        System.out.println(this.real + " + " + this.imaginary + "i");
+        String sign = this.imaginary > 0 ? " + " : " - ";
+        System.out.println(this.real + sign + Math.abs(this.imaginary) + "i");
     }
 
     public ComplexNumber add(ComplexNumber other) {

@@ -1,9 +1,9 @@
 public class Student {
     private String name;
     private String regNumber;
-    private double mark;
+    private double[] mark;
 
-    public Student(String name, String regNumber, double mark) {
+    public Student(String name, String regNumber, double[] mark) {
         this.name = name;
         this.regNumber = regNumber;
         this.mark = mark;
@@ -17,7 +17,7 @@ public class Student {
         return regNumber;
     }
 
-    public double getMark() {
+    public double[] getMark() {
         return mark;
     }
 }

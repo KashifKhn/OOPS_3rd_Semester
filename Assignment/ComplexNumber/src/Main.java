@@ -13,5 +13,7 @@ public class Main {
         System.out.println("conjugate");
         ComplexNumber c7 = c1.conjugate();
         c7.printComplexNumber();
+        ComplexNumber c8 = c2.conjugate();
+        c8.printComplexNumber();
     }
 }

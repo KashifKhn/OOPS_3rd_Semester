@@ -1,17 +1,32 @@
+import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
-        GradeBook OOPGradeBook = new GradeBook("Object Oriented Programming", "CSC 221", "Dr.", new Student[] {
-            new Student("John Doe", "CSC/2013/001", 70.0),
-            new Student("Kha", "CSC/2013/002", 80.0),
-            new Student("James Doe", "CSC/2013/003", 90.0),
-            new Student("Janet Doe", "CSC/2013/004", 100.0),
-            new Student("Jude Doe", "CSC/2013/005", 60.0),
-            new Student("Jade Doe", "CSC/2013/006", 50.0),
-            new Student("Jade Doe", "CSC/2013/007", 40.0),
-            new Student("Jade Doe", "CSC/2013/008", 30.0),
-            new Student("Jade Doe", "CSC/2013/009", 20.0),
-            new Student("Jade Doe", "CSC/2013/010", 10.0),
-        });
-        OOPGradeBook.processGrades();
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Please Enter course title: ");
+        String courseTitle = sc.nextLine();
+        System.out.print("Please Enter course code: ");
+        String courseCode = sc.nextLine();
+        System.out.print("Please Enter course instructor: ");
+        String courseInstructor = sc.nextLine();
+        System.out.print("Please Enter number of students: ");
+        int numberOfStudents = sc.nextInt();
+        Student [] students = new Student[numberOfStudents];
+        System.out.print("Please Enter number of Student: ");
+        int numberOfSubjects = sc.nextInt();
+        for(int i = 0; i < numberOfStudents; i++) {
+            System.out.print("Please Enter student name: ");
+            String name = sc.next();
+            System.out.print("Please Enter student reg number: ");
+            String regNumber = sc.next();
+            double [] marks = new double[numberOfSubjects];
+            for(int j = 0; j < numberOfSubjects; j++) {
+                System.out.print("Please Enter mark for Assessment " + (j + 1) + ": ");
+                marks[j] = sc.nextDouble();
+            }
+            students[i] = new Student(name, regNumber, marks);
+        }
+        GradeBook gradeBook = new GradeBook(courseTitle, courseCode, courseInstructor, students);
+        gradeBook.processGrades();
     }
 }
