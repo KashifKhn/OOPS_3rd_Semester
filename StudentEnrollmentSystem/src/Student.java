@@ -13,6 +13,10 @@ public class Student {
         this.regNum = regNum;
     }
 
+    public String getRegNum() {
+        return regNum;
+    }
+
     private void addCourse(Course course) {
         int MAX_CREDIT_HOURS = 21;
         if (totalCreditHours + course.getCourseCreditHours() <= MAX_CREDIT_HOURS) {
@@ -94,5 +98,10 @@ public class Student {
         System.out.println("Name: " + this.regNum);
         System.out.println();
         displayRegCourse();
+    }
+
+    @Override
+    public String toString() {
+        return String.format("%S\t%S\n", this.regNum, this.name);
     }
 }
