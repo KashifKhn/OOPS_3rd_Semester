@@ -4,8 +4,6 @@ public class Course {
     private double midTermScore;
     private double finalTermScore;
 
-    private static double
-
     public Course(String courseName, double[] quizScores, double midTermScore, double finalTermScore) {
         this.courseName = courseName;
         this.quizScores = quizScores;
