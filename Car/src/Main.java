@@ -1,8 +1,8 @@
 public class Main {
     public static void main(String[] args) {
 
-        Car.setPricePerLiter(2.5);
         Car myCar = new Car("Toyota", 50.0, 20.0, 25.0);
+        Car.setPricePerLiter(2.5);
 
         myCar.addFuel();
 
